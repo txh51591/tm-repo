@@ -1,6 +1,4 @@
-package io.threatrix.threatmatrix;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package io.threatrix.threatmatrix;  import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
 public abstract class Application {

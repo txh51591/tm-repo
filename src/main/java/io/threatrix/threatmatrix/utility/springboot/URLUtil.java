@@ -1,4 +1,4 @@
-package io.threatrix.threatmatrix.utility;
+package io.threatrix.threatmatrix.utility.springboot;
 
 import org.springframework.util.SystemPropertyUtils;
 
@@ -28,6 +28,4 @@ public class URLUtil {
         }
         return urls.toArray(new URL[0]);
     }
-
-
 }
