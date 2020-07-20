@@ -34,7 +34,8 @@ public class TXAwareDataSourceProxy  {
     }
 
     /**
-     * Specify whether to reobtain the target Connection for each operation
+     * Specify whether to reobtain the target C:wq!:::wq!
+     * onnection for each operation
      * performed within a transaction.
      * <p>The default is "false". Specify "true" to reobtain transactional
      * Connections for every call on the Connection proxy; this is advisable
