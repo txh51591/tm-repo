@@ -32,7 +32,7 @@ jobs:
             - run:
                 name: Build the application
                 command: |
-                    ls -l
+                java -jar threatagent.jar --repo-owner=threatrix --repo-name=threat-matrix --branch=jm-ds-path-1 --pr-num=5 --scm=GITHUB --env=dev C:\Users\john\Desktop\drive\projects\threat-matrix
                     
             #- persist_to_workspace:
             #    root: *workspace_root
