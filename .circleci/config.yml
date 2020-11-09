@@ -32,13 +32,13 @@ jobs:
             - run:
                 name: Build the application
                 command: |
-                    mvn clean package
-                    ls target
+            #        mvn clean package
+                    ls -l
                     
-            - persist_to_workspace:
-                root: *workspace_root
-                paths:
-                    - target
+            #- persist_to_workspace:
+            #    root: *workspace_root
+            #    paths:
+            #        - target
                 
   
                     
