@@ -31,11 +31,11 @@ jobs:
             # build the apps!!
             - run:
                 name: Install Threatrix ThreatAgent
-                command: curl https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threatagent.jar > ./threatagent.jar
+                command: curl https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threatagent.jar > ./tmp/workspace/threatagent.jar
                 
             - run:
                 name: ThreatAgent Scan
-                command: java -jar threatagent.jar --scm=GITHUB --env=dev C:\Users\john\Desktop\drive\projects\threat-matrix
+                command: java -jar threatagent.jar --scm=GITHUB --env=dev /tmp/workspace/
                     
 workflows:
     version: 2
