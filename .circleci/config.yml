@@ -31,7 +31,8 @@ jobs:
             # build the apps!!
             - run:
                 name: Install Threatrix ThreatAgent
-                command: curl https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threatagent.jar > /tmp/workspace/threatagent.jar
+                command: ls -l
+                #curl https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threatagent.jar > /tmp/workspace/threatagent.jar
                 
             - run:
                 name: ThreatAgent Scan
