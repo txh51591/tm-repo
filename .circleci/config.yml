@@ -32,8 +32,9 @@ jobs:
             - run:
                 name: Install Threatrix ThreatAgent
                 command: |
+                    curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > sl.tar.gz
+                    #curl https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threatagent.jar > threatagent.jar
                     ls -l
-                    curl https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threatagent.jar > threatagent.jar
                 
             - run:
                 name: ThreatAgent Scan
