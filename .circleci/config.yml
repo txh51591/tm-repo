@@ -37,7 +37,7 @@ jobs:
                 
             - run:
                 name: ThreatAgent Scan
-                command: java -jar threatagent.jar --scm=GITHUB --env=stage /tmp/workspace/
+                command: java -jar threatagent.jar --scm=GITHUB --env=stage ./
                     
 workflows:
     version: 2
