@@ -8,7 +8,7 @@ references:
 jobs:
     build:
         docker:
-            - image: circleci/openjdk:9-jdk-node
+            - image: circleci/openjdk:11-jdk-node
         working_directory: ~/repo
         environment:
             MAVEN_OPTS: -Xmx3200m
