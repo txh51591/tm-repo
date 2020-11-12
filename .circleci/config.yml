@@ -33,7 +33,7 @@ jobs:
                 name: Install Threatrix ThreatAgent
                 command: |
                     curl -L https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpa/threatagent-1.0.0.jar > threatagent.jar
-                    ls -l
+                    ls -l 
                 
             - run:
                 name: ThreatAgent Scan
