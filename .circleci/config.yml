@@ -33,11 +33,11 @@ jobs:
                 name: Install Threatrix ThreatAgent
                 command: |
                     curl -L https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpa/threatagent-1.0.0.jar > threatagent.jar
-                    ls -l
+                    ls -l 
                 
             - run:
                 name: ThreatAgent Scan
-                command: java -jar threatagent.jar --pr-num=${CIRCLE_PULL_REQUEST##*/} --scm=GITHUB --env=stage ./
+                command: java -jar threatagent.jar --env=stage ./
                     
 workflows:
     version: 2
