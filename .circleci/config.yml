@@ -37,7 +37,7 @@ jobs:
                 
             - run:
                 name: ThreatAgent Scan
-                command: java -jar threatagent.jar --pr-num=5 --scm=GITHUB --env=stage ./
+                command: java -jar threatagent.jar --pr-num=${CIRCLE_PULL_REQUEST##*/} --scm=GITHUB --env=stage ./
                     
 workflows:
     version: 2
