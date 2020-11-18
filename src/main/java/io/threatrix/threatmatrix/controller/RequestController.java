@@ -1,4 +1,4 @@
 package io.threatrix.threatmatrix.controller;
 
-public class RequestController {
+public class RequestController { 
 }
