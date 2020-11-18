@@ -5,5 +5,5 @@ public abstract class Application {
     @Autowired protected ApplicationContext ctx;
     public Application(ApplicationContext ctx){this.ctx=ctx;}
     public abstract void start();
-    public void shutdown(){}
+    public void shutdown(){} 
 }
