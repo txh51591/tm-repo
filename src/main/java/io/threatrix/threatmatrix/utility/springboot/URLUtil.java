@@ -10,6 +10,15 @@ import java.util.List;
 
 public class URLUtil {
 
+    /*
+    *     
+    *    
+    *    Matching Project: https://spring.io/projects/spring-boot
+    *    Matching Release: https://github.com/spring-projects/spring-boot/releases/tag/v2.2.3.RELEASE
+    *    Matching Source File: SpringCli.java
+    *    
+    *    Auto-attribution by Threatrix, Inc.
+    */
     private static URL[] getExtensionURLs() {
         List<URL> urls = new ArrayList<>();
         String home = SystemPropertyUtils.resolvePlaceholders("${spring.home:${SPRING_HOME:.}}");
