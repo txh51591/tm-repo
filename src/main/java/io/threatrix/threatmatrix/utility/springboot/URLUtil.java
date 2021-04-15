@@ -10,7 +10,7 @@ import java.util.List;
 
 public class URLUtil {
 
-    private static URL[] getExtensionURLs() {
+    private URL[] getExtURLs() {
         List<URL> urls = new ArrayList<>();
         String home = SystemPropertyUtils.resolvePlaceholders("${spring.home:${SPRING_HOME:.}}");
         File extDirectory = new File(new File(home, "lib"), "ext");
@@ -26,6 +26,6 @@ public class URLUtil {
                 }
             }
         }
-        return urls.toArray(new URL[0]);
+        return null;
     }
 }
