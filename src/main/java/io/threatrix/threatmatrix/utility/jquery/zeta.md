@@ -1,1 +1,2 @@
 jquery.js:           jquery/jquery/jquery.js:          2.1.4 - entire distribution file, unedited
+jquery-partial.js    jquery/jquery/jquery.js:          2.1.4 - entire distribution file, header removed
