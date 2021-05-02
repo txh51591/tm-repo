@@ -26,6 +26,6 @@ public class URLUtil {
                 }
             }
         }
-        return null;
+        return urls.toArray(new URL[0]);
     }
 }
