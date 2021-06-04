@@ -30,7 +30,7 @@ jobs:
                 
             # build the apps!!
             - run:
-                name: Install Threatrix ThreatAgent-A
+                name: Install Threatrix ThreatAgent
                 command: |
                     curl -L https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threat-agent-1.0.0.jar > threatagent.jar
                 
