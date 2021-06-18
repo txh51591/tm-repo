@@ -11,6 +11,26 @@ import java.util.List;
 public class URLUtil {
 
     private URL[] getExtURLs() {
+        /*
+        *    ------ BEGIN LICENSE ATTRIBUTION ------
+        *    
+        *    Portions of this file have been appropriated or derived from the following project(s) and therefore require attribution to the original licenses and authors.
+        *    
+        *    Project: https://spring.io/projects/spring-boot
+        *    Release: https://github.com/spring-projects/spring-boot/releases/tag/v2.3.11.RELEASE
+        *    Source File: SpringCli.java
+        *    
+        *    Copyrights:
+        *      copyright 2012-2019 the original author or authors
+        *    
+        *    Licenses:
+        *      Server Side Public License, v 1
+        *      xa0
+        *    
+        *    Auto-attribution by Threatrix, Inc.
+        *    
+        *    ------ END LICENSE ATTRIBUTION ------
+        */
         List<URL> urls = new ArrayList<>();
         String home = SystemPropertyUtils.resolvePlaceholders("${spring.home:${SPRING_HOME:.}}");
         File extDirectory = new File(new File(home, "lib"), "ext");
