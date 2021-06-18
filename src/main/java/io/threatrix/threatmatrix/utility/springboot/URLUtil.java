@@ -14,7 +14,8 @@ public class URLUtil {
         /*
         *    ------ BEGIN LICENSE ATTRIBUTION ------
         *    
-        *    Portions of this file have been appropriated or derived from the following project(s) and therefore require attribution to the original licenses and authors.
+        *    Portions of this file have been appropriated or derived from the following project(s)
+        *    and therefore require attribution to the original licenses and authors.
         *    
         *    Project: https://spring.io/projects/spring-boot
         *    Release: https://github.com/spring-projects/spring-boot/releases/tag/v2.3.11.RELEASE
