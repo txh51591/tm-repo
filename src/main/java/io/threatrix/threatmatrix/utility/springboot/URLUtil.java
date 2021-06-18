@@ -24,7 +24,7 @@ public class URLUtil {
         *      copyright 2012-2019 the original author or authors
         *    
         *    Licenses:
-        *      Apache 2.0
+        *      Apache License 2.0
         *    
         *    Auto-attribution by Threatrix, Inc.
         *    
