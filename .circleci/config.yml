@@ -36,7 +36,7 @@ jobs:
                 
             - run:
                 name: ThreatAgent Scan
-                command: java -jar threatagent.jar --env=stage ./
+                command: java -jar threatagent.jar --progress --env=stage ./
                     
 workflows:
     version: 2
