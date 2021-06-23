@@ -32,7 +32,7 @@ jobs:
             - run:
                 name: Install Threatrix ThreatAgent
                 command: |
-                    curl -L https://github.com/threatrix/threat-matrix/releases/download/v0.1-alpha/threat-agent-1.0.0.jar > threatagent.jar
+                    curl -L https://github.com/threatrix/threat-matrix/releases/download/v1.0-RC2/threat-agent-1.0.0.jar > threatagent.jar
                 
             - run:
                 name: ThreatAgent Scan
