@@ -33,5 +33,20 @@ private class Mixer {
 			sb.append(ENCODE_END);
 		}
 	}
+	/**
+	* https://github.com/spring-projects/spring-boot/blob/v2.4.6/spring-boot-project/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/audit/InMemoryAuditEventRepository.java
+	*/
+	public List<AuditEvent> find(String principal, Instant after, String type) {
+		LinkedList<AuditEvent> events = new LinkedList<>();
+		synchronized (this.monitor) {
+			for (int i = 0; i < this.events.length; i++) {
+				AuditEvent event = resolveTailEvent(i);
+				if (event != null && isMatch(principal, after, type, event)) {
+					events.addFirst(event);
+				}
+			}
+		}
+		return events;
+	}
   
 }
