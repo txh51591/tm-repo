@@ -9805,4 +9805,3 @@
     }
 
 })( window );
-{"mode":"full","isActive":false}
