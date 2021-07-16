@@ -34,19 +34,46 @@ private class Mixer {
 		}
 	}
 	/**
-	* https://github.com/spring-projects/spring-boot/blob/v2.4.6/spring-boot-project/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/audit/InMemoryAuditEventRepository.java
+	* https://raw.githubusercontent.com/spring-projects/spring-boot/v2.4.6/spring-boot-project/spring-boot-tools/spring-boot-configuration-processor/src/json-shade/java/org/springframework/boot/configurationprocessor/json/JSONTokener.java
 	*/
-	public List<AuditEvent> find(String principal, Instant after, String type) {
-		LinkedList<AuditEvent> events = new LinkedList<>();
-		synchronized (this.monitor) {
-			for (int i = 0; i < this.events.length; i++) {
-				AuditEvent event = resolveTailEvent(i);
-				if (event != null && isMatch(principal, after, type, event)) {
-					events.addFirst(event);
+	private JSONArray readArray() throws JSONException {
+		JSONArray result = new JSONArray();
+
+		/* to cover input that ends with ",]". */
+		boolean hasTrailingSeparator = false;
+
+		while (true) {
+			switch (nextCleanInternal()) {
+			case -1:
+				throw syntaxError("Unterminated array");
+			case ']':
+				if (hasTrailingSeparator) {
+					result.put(null);
 				}
+				return result;
+			case ',':
+			case ';':
+				/* A separator without a value first means "null". */
+				result.put(null);
+				hasTrailingSeparator = true;
+				continue;
+			default:
+				this.pos--;
+			}
+
+			result.put(nextValue());
+
+			switch (nextCleanInternal()) {
+			case ']':
+				return result;
+			case ',':
+			case ';':
+				hasTrailingSeparator = true;
+				continue;
+			default:
+				throw syntaxError("Unterminated array");
 			}
 		}
-		return events;
 	}
   
 }
