@@ -16,6 +16,9 @@ import java.util.List;
 @ComponentScan("io.threatrix.threatmatrix")
 public class BootApp implements CommandLineRunner {
 
+    /**
+    * Boot app boots the app
+    */
     List<Application> apps = new ArrayList<>();
     @Autowired private ApplicationContext ctx;
 
