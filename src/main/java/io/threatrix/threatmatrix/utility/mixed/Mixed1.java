@@ -161,4 +161,83 @@ public class Mixed1 {
         }
     }
 
+
+    /*
+       github@spring-projects/spring-framework:PathMatchingBenchmark.java:v5.3.9
+       modifications: none
+   */
+    static class RouteGenerator {
+
+        static List<Route> staticRoutes() {
+            return Arrays.asList(
+                new Route("/"),
+                new Route("/why-spring"),
+                new Route("/microservices"),
+                new Route("/reactive"),
+                new Route("/event-driven"),
+                new Route("/cloud"),
+                new Route("/web-applications"),
+                new Route("/serverless"),
+                new Route("/batch"),
+                new Route("/community/overview"),
+                new Route("/community/team"),
+                new Route("/community/events"),
+                new Route("/community/support"),
+                new Route("/some/other/section"),
+                new Route("/blog.atom")
+            );
+        }
+
+        static List<Route> captureRoutes() {
+            return Arrays.asList(
+                new Route("/guides"),
+                new Route("/guides/gs/{repositoryName}",
+                    "/guides/gs/rest-service", "/guides/gs/scheduling-tasks",
+                    "/guides/gs/consuming-rest", "/guides/gs/relational-data-access"),
+                new Route("/projects"),
+                new Route("/projects/{name}",
+                    "/projects/spring-boot", "/projects/spring-framework",
+                    "/projects/spring-data", "/projects/spring-security", "/projects/spring-cloud"),
+                new Route("/blog/category/{category}.atom",
+                    "/blog/category/releases.atom", "/blog/category/engineering.atom",
+                    "/blog/category/news.atom"),
+                new Route("/tools/{name}", "/tools/eclipse", "/tools/vscode"),
+                new Route("/team/{username}",
+                    "/team/jhoeller", "/team/bclozel", "/team/snicoll", "/team/sdeleuze", "/team/rstoyanchev"),
+                new Route("/api/projects/{projectId}",
+                    "/api/projects/spring-boot", "/api/projects/spring-framework",
+                    "/api/projects/reactor", "/api/projects/spring-data",
+                    "/api/projects/spring-restdocs", "/api/projects/spring-batch"),
+                new Route("/api/projects/{projectId}/releases/{version}",
+                    "/api/projects/spring-boot/releases/2.3.0", "/api/projects/spring-framework/releases/5.3.0",
+                    "/api/projects/spring-boot/releases/2.2.0", "/api/projects/spring-framework/releases/5.2.0")
+            );
+        }
+
+        static List<Route> regexRoute() {
+            return Arrays.asList(
+                new Route("/blog/{year:\\\\d+}/{month:\\\\d+}/{day:\\\\d+}/{slug}",
+                    "/blog/2020/01/01/spring-boot-released", "/blog/2020/02/10/this-week-in-spring",
+                    "/blog/2020/03/12/spring-one-conference-2020", "/blog/2020/05/17/spring-io-barcelona-2020",
+                    "/blog/2020/05/17/spring-io-barcelona-2020", "/blog/2020/06/06/spring-cloud-release"),
+                new Route("/user/{name:[a-z]+}",
+                    "/user/emily", "/user/example", "/user/spring")
+            );
+        }
+
+        static List<Route> allRoutes() {
+            List<Route> routes = new ArrayList<>();
+            routes.addAll(staticRoutes());
+            routes.addAll(captureRoutes());
+            routes.addAll(regexRoute());
+            routes.add(new Route("/static/**", "/static/image.png", "/static/style.css"));
+            routes.add(new Route("/**", "/notfound", "/favicon.ico"));
+            return routes;
+        }
+
+    }
+
+
+
+
 }
