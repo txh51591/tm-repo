@@ -12,16 +12,18 @@ else {
 						var n = m == "~" || m == "+" ? ret[j].nextSibling : ret[j].firstChild;
 						for ( ; n; n = n.nextSibling )
 							if ( n.nodeType == 1 ) {
-								var nid = jQuery.data(n);
-
+								
 								if ( m == "~" && merge[id] ) break;
 								
+								var nid = jQuery.data(n);
+								
 								if (!nodeName || n.nodeName.toUpperCase() == nodeName ) {
-									if ( m == "~" ) merge[nid] = true;
 									t.push( n );
+									if ( m == "~" ) merge[nid] = true;
+									
 								}
 								
-								if ( m == "+" ) break;
+								if ( m == "+" ) continue;
 							}
 					}
 
