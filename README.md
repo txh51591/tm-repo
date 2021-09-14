@@ -1,3 +1,3 @@
 # threat-matrix
 
-A Threatrix demonstration repository for Threatrix capabilites.
+A repository created to demonstrate Threatrix capabilites. 
