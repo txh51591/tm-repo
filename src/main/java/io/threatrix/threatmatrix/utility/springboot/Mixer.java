@@ -34,7 +34,7 @@ private class Mixer {
 		}
 	}
 	/**
-	* https://raw.githubusercontent.com/spring-projects/spring-boot/v2.4.6/spring-boot-project/spring-boot-tools/spring-boot-configuration-processor/src/json-shade/java/org/springframework/boot/configurationprocessor/json/JSONTokener.java
+	* https://github.com/spring-projects/spring-boot/blob/v2.4.6/spring-boot-project/spring-boot-tools/spring-boot-configuration-processor/src/json-shade/java/org/springframework/boot/configurationprocessor/json/JSONTokener.java
 	*/
 	private JSONArray readArray() throws JSONException {
 		JSONArray result = new JSONArray();
