@@ -1,3 +1,7 @@
+@settings {
+  font-size: 100;
+}
+
 |LOCAL FILE NAME|REPOSITORY|REPOSITORY  FILE NAME|VERSION|SHA1|NOTES|
 ----------------|----------|---------------------|-------|-----|-----|
 netty-handler-proxy-4.1.49.Final.jar|maven:io.netty/netty-handler-proxy|[netty-handler-proxy-4.1.49.Final.jar](https://mvnrepository.com/artifact/io.netty/netty-handler-proxy/4.1.49.Final)|4.1.49-Final|6a2064cc62c7d18719742e1e101199c04c66356c|Netty Handler Proxy 4.1.49.Final jar release|
