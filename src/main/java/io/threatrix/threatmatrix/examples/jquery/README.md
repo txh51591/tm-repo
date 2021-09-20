@@ -5,4 +5,3 @@ jquery-1.10.1.js|jquery/jquery|[jquery.js](https://github.com/jquery/jquery/blob
 selector-v1.2.3.js|jquery/jquery|[selector.js](https://github.com/jquery/jquery/blob/1.2.3/test/unit/selector.js) |1.2.3|files contents copied. No modifications
 selector-v1.2.3-snippet.js|jquery/jquery|[selector.js](https://github.com/jquery/jquery/blob/1.2.3/test/unit/selector.js) |1.2.3|Random else block. No modifications
 selector-v1.2.3-snippet-modified.js|jquery/jquery|[selector.js](https://github.com/jquery/jquery/blob/1.2.3/test/unit/selector.js) |1.2.3|Random else block. Approx 10% modifications
-selector.js
